@@ -1,8 +1,8 @@
 # Use an official OpenJDK runtime as a parent image
 FROM openjdk:17-slim
 
-# Install necessary tools (net-tools for netstat, procps for ps)
-RUN apt-get update && apt-get install -y net-tools procps && rm -rf /var/lib/apt/lists/*
+# Install necessary tools (curl, net-tools, procps)
+RUN apt-get update && apt-get install -y curl net-tools procps && rm -rf /var/lib/apt/lists/*
 
 # Set the working directory in the container
 WORKDIR /app
